@@ -7,21 +7,21 @@ import io.cucumber.java.en.When;
 
 public class Check24FlightBooking {
 
+    LandingDocument landingDocument = new LandingDocument();
+
     @Given("Access check24 page")
     public void access_check24_page() {
-        LandingDocument landingDocument = new LandingDocument();
         landingDocument.access();
-        landingDocument.acceptCookies();
     }
 
     @When("Accept cookies")
     public void accept_cookies() {
-        System.out.println("@@@@@@@@@@@@@@@@@");
+        landingDocument.acceptCookies();
     }
 
     @When("Navigate to the flight booking page")
     public void navigate_to_the_flight_booking_page() {
-        System.out.println("@@@@@@@@@@@@@@@@@");
+        landingDocument.clickNavBarTab("flights");
     }
 
     @When("Select flight and date")
