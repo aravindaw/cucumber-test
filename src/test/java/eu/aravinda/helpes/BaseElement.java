@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseElement {
     static int timeOut = 5;
-    public static enum TYPE {
+    public enum TYPE {
         XPATH, ID, CLASS,
     }
     public static void waitForElement(WebElement element) {
